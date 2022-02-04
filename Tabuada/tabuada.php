@@ -1,10 +1,11 @@
 <?php
-    /************************************************* 
-     * 
-     * 
-     * 
-     * 
-    *************************************************/
+    /*****************************************************
+     * Objetivo: Apresentar e calcular uma tabuada simples
+      de escolha do usuário
+     * esenvolvedor: Gabriel Gomes
+    *  Data: 04/02/2022
+    * Versão: 1.0
+    *****************************************************/
 
     //Declaração de variáveis 
     $valor1 = (double) 0;
