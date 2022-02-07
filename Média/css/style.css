@@ -1,9 +1,4 @@
-body {
-    display: flex;
-    flex-direction: column-reverse; 
-    gap: 15rem;
-  }
-  
+
   #conteudo{
     width: 400px;
     height: 300px;
@@ -11,12 +6,14 @@ body {
     margin-right: auto;
     border: solid 1px #000000;
     text-align: center;
+    z-index: 1000;
+    
   }
   
   #titulo{
     width: inherit;
     height: 80px;
-    background-color: #000000;
+    background-color: #1b1624;
     color: #ffffff;
     box-sizing: border-box;
     padding-top: 25px;
@@ -27,18 +24,23 @@ body {
   }
   
   #form{
+    color: #fff;
     width: inherit;
     height: 185px;
     padding-top: 20px;
     box-sizing: border-box;
+    background-color: #261e33;
   }
   
   input{
     margin-bottom: 10px;
     margin-left: 10px;
+    background-color: #1b1624;
+    color: #fff;
   }
   
   #resultado{
+    color: #fff;
     width: inherit;
     height: 35px;
     background-color: rgb(177, 71, 209);
@@ -48,11 +50,16 @@ body {
     font-size: 20px;
     font-weight: bold;
   }
+
+  #botaoCalc{
+      color: #fff;
+      background-color: #1b1624;
+  }
   
   #botaoReset{
     width: 100px;
     height: 30px;
-    background-color: firebrick;
+    background-color: rgb(123, 42, 148);
     color: #ffffff;
     font-size: 0.9em;
     text-align: center;
@@ -75,19 +82,3 @@ body {
     text-align: center;
     
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

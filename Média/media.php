@@ -55,7 +55,9 @@
 <html lang="pt-BR">
     <head>
         <title>Média</title>
-       <link rel="stylesheet" type="text/css" href="css/style.css">
+       <link rel="stylesheet" href="../css/menu.css">
+       <link rel="stylesheet" href="./css/style.css">
+       <link rel="stylesheet" href="../css/synthwave.css">
         <meta charset="utf-8">
     </head>
 	<body>
@@ -87,7 +89,7 @@
                         <input type="number" name="txtn4" value="<?=$nota4?>" >
                     </div>
                     <div>
-                        <input type="submit" name="btncalc" value ="Calcular" >
+                        <input id="botaoCalc" type="submit" name="btncalc" value ="Calcular" >
                         <div id="botaoReset">
                             <a href="media.php">
                                 Novo Cálculo
@@ -101,6 +103,29 @@
                 A média é: <?=$media?>
             </footer>
         </div>
+
+        <div id="menu-bar">
+        <div id="menu" onclick="menuOnClick()">
+            <div id="barra1" class="barra"></div>
+            <div id="barra2" class="barra"></div>
+            <div id="barra3" class="barra"></div>
+
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
+            <li><a href="#">Média</a></li>
+            <li><a href="../Par-Impar/impar-par.php">Pares e Ímpares</a></li>
+            <li><a href="../Tabuada/tabuada.php">Tabuada</a></li>
+        </ul>
+
+        </div>
+        <div class="menu-burger" id="menu-burger"></div>
+            
+        <div class="overlay"></div>
+        <div class="overlay glitch"></div>
+
+        <script src="../js/script.js"></script>
         
 		
 	</body>

@@ -98,7 +98,9 @@ if(isset($_POST['btncalc'])) {
 <html>
     <head>
         <title>Calculadora - Simples</title>
+		<link rel="stylesheet" href="../css/menu.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="../css/synthwave.css">
     </head>
 	<body>
         
@@ -117,7 +119,7 @@ if(isset($_POST['btncalc'])) {
 							<input type="radio" name="rdocalc" value="multiplicar" <?=$opcao == 'MULTIPLICAR'?'checked':null;?> >Multiplicar <br>
 							<input type="radio" name="rdocalc" value="dividir" <?=$opcao == 'DIVIDIR'?'checked':null;?> >Dividir <br>
 							
-							<input type="submit" name="btncalc" value ="Calcular" >
+							<input id="Calcular" type="submit" name="btncalc" value ="Calcular" >
 							
 						</div>	
 						<div id="resultado">
@@ -128,7 +130,29 @@ if(isset($_POST['btncalc'])) {
             </div>
            
         </div>
+
+		<div id="menu-bar">
+        <div id="menu" onclick="menuOnClick()">
+            <div id="barra1" class="barra"></div>
+            <div id="barra2" class="barra"></div>
+            <div id="barra3" class="barra"></div>
+
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="#">Calculadora</a></li>
+            <li><a href="../Média/media.php">Média</a></li>
+            <li><a href="../Par-Impar/impar-par.php">Pares e Ímpares</a></li>
+            <li><a href="../Tabuada/tabuada.php">Tabuada</a></li>
+        </ul>
+
+    </div>
+    <div class="menu-burger" id="menu-burger"></div>
         
+    <div class="overlay"></div>
+    <div class="overlay glitch"></div>
+
+    <script src="../js/script.js"></script>
 		
 	</body>
 

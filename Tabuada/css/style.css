@@ -1,17 +1,18 @@
+ 
 #conteudo{
+    display: flex;
     width: 400px;
-    height: 300px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     border: solid 1px #0c000f;
     text-align: center;
     color: #fff;
-    z-index: 1000;
    
 }
-
+ 
 #titulo{
-    width: inherit;
+    width: max-content;
     height: 80px;
     background-color: #1b1624;
     color: #ffffff;
@@ -21,14 +22,18 @@
     font-family: verdana;
     word-spacing: 5px;
     letter-spacing: 3px;
+    z-index: 1000;
 }
-
+ 
 #form{
     width: inherit;
-    height: 218px;
-    padding-top: 20px;
+    height: 190px;
+    position: absolute;
+    
+    padding-top: 90px;
     box-sizing: border-box;
     background-color: #261e33;
+    z-index: 999;
 }
 
 input{
@@ -38,9 +43,17 @@ input{
     background-color: #1b1624;
 }
 
-#resultado{
+#container_button{
     width: 200px;
-    height: 100px;
+    height: 50px;
+    float: left;
+    text-align: left;
+}
+ 
+#resultado{
+    width: 400px;
+    height: 215px;
+    overflow: scroll;
     background-color: #1b1624;
     box-sizing: border-box;
     padding-top: 2px;
@@ -50,15 +63,6 @@ input{
     float: left;
 }
 
-#container_opcoes{
-    width: 200px;
-    height: 50px;
-    float: left;
-    text-align: left;
-}
 
-#Calcular{
-    width: 80px;
-    height: 30px;
-    margin-left: 85%;
-}
+
+
