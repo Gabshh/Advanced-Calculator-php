@@ -14,5 +14,5 @@
     const ERRO_MSG_OPERACAO_CALCULO = '<script> alert("Favor escolher uma operação válida"); </script>';
     const ERRO_MSG_CARACTER_INVALIDO_TEXTO = '<script> alert("Não é possível realizar cálculos de dados não númericos"); </script>';
     const ERRO_MSG_DIVISAO_ZERO = '<script> alert("Não é possível realizar uma divisão onde o valor 2 é igual a 0"); </script>';
-
+    const ERRO_TABUADA_ZERO = '<script> alert("A tabuada do 0 é inexistente, tente um numero maior"); </script>';
 ?>

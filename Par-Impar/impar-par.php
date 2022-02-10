@@ -1,13 +1,35 @@
 <?php
+    /*****************************************************
+     * Objetivo: Identificar os números impares e pares 
+     * entre os valores que o usúario escolher
+     * Desenvolvedor: Gabriel Gomes
+     * Data: 10/02/2022
+     * Versão: 1.0 
+    *****************************************************/
 
-    $valor = (int) 0;
-    $contador = (int) 0;
-    $resultado = (string) null;
+    //Declaração de variáveis
+    $valor1 = (int) 0;
+    $valor2 = (int) 0;
+    $resultadoImpar = (int) null;
+    $resultadoPar = (int) null;
 
-    if (isset($_POST['btnCalc'])) {
-
-        $valor = $_POST['txtNumero'];
+    //Verificar se o botão foi clicado
+    if (isset($_POST['buttonCalcular'])) {
+        //Recebendo os dados do formulário
+        $valor1 = $_POST['txtn1'];
+        $valor2 = $_POST['txtn2'];
         
+        for($contador = 0; $contador <= $valor2; $contador++){
+            if ($contador % 2 == 0){
+                $resultadoPar .= $contador. '<br/>';
+            }else{
+                $resultadoImpar .= $contador. '<br/>';
+            }
+
+
+        }   
+
+
         /*Exemplo utilizando WHILE
             while($contador <= $valor) {
                 echo($contador. '<br>');
@@ -18,6 +40,10 @@
         for($contador = 0; $contador <= $valor; $contador++)
             //echo($contador. '<br>'); OU $resultado = $resultado . $contador.'br';
             $resultado.= $contador.'<br>';
+
+
+
+
     }
 
 ?>
@@ -41,8 +67,8 @@
 
             <div id="form">
                 <form name="formRepeticao" method="post" action="impar-par.php">
-                    n° inicial: <input type="text" name="txtn1" value=""> <br>
-                    ⠀n°  final: <input type="text" name="txtn2" value="">
+                    <span>n° inicial:</span> <input type="text" name="txtn1" value=""> <br>
+                    <span>⠀n°  final:</span> <input type="text" name="txtn2" value="">
 
                     <div id="container-button">
                             <input type="submit" name="buttonCalcular" value="Calcular">
@@ -54,8 +80,8 @@
                 </div>
 
                 <div id="resultados">
-                    <div id="resultado-impar">1</div>
-                    <div id="resultado-par">2</div>
+                    <div id="resultado-impar"></div>
+                    <div id="resultado-par"></div>
                 </div>
 
                 </form>

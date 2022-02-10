@@ -99,7 +99,7 @@ if(isset($_POST['btncalc'])) {
     <head>
         <title>Calculadora - Simples</title>
 		<link rel="stylesheet" href="../css/menu.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="./css/stylesCalculadora.css">
 		<link rel="stylesheet" href="../css/synthwave.css">
     </head>
 	<body>

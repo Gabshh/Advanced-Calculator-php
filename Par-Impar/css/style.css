@@ -54,14 +54,14 @@ input{
     background-color: #1b1624;
     float: left;
     padding-left: 76px;
-    padding-right: 80px;
+    padding-right: 55px;
 }
 
 #secao-par{
     background-color: #1b1624;
     float: right;
     padding-left: 77px;
-    padding-right: 80px;
+    padding-right: 55px;
     
 }
 
@@ -71,7 +71,7 @@ input{
     float: left;
     padding-left: 93px;
     padding-right: 90px;
-    overflow: scroll;
+    overflow: auto;
 }
 #resultado-par{
     height: 200px;
@@ -79,5 +79,5 @@ input{
     float: right;
     padding-left: 82px;
     padding-right: 85px;
-    overflow: scroll;
+    overflow: auto;
 }

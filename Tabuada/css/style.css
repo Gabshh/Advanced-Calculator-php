@@ -53,7 +53,7 @@ input{
 #resultado{
     width: 400px;
     height: 215px;
-    overflow: scroll;
+    overflow: auto;
     background-color: #1b1624;
     box-sizing: border-box;
     padding-top: 2px;

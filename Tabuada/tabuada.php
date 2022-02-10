@@ -2,15 +2,52 @@
     /*****************************************************
      * Objetivo: Apresentar e calcular uma tabuada simples
       de escolha do usuário
-     * esenvolvedor: Gabriel Gomes
-    *  Data: 04/02/2022
-    * Versão: 1.0
+     * Desenvolvedor: Gabriel Gomes
+     * Data: 10/02/2022
+     * Versão:2.0 
     *****************************************************/
+
+    //Import do arquivo de configurações de variáveis e constantes
+	require_once("../Calculadora/modulo/config.php");
+    //Import do arquivo de funções para calculos matemáticos
+	require_once("../Calculadora/modulo/calculos.php");
 
     //Declaração de variáveis 
     $valor1 = (double) 0;
     $valor2 = (double) 0;
-    $resultado = (double) 0;
+    
+    $produto = (double) null;
+    $resultado = (string) null;
+
+    //Verificar se o botão foi clicado
+    if(isset($_POST['buttonCalcular'])) {
+
+        //Recebendo os dados do formulário
+        $valor1 = $_POST['txtn1'];
+        $valor2 = $_POST['txtn2'];
+
+        //Validação de tratamento de erro para caixa vazia
+        if($_POST['txtn1'] == "" || $_POST['txtn2'] == "") {
+		echo(ERRO_MSG_CAIXA_VAZIA);
+        }else{
+            //Validaão para tratamento de erro para dados incorretos
+            if (!is_numeric($valor1) || !is_numeric($valor2)){
+                echo(ERRO_MSG_CARACTER_INVALIDO_TEXTO);
+            } else {
+                //Validação para tratamento da tabuada do 0 (inexistente)
+                if ($valor1 == 0) {
+                    echo(ERRO_TABUADA_ZERO);
+                } else {
+                    //Criando loop e chamada para a funçao que vai realizar os calculos matematicos
+                    for($contador = 0; $contador <= $valor2; $contador++) {
+                    $produto = operacaoMatematica($valor1, $contador, "MULTIPLICAR");
+                    $resultado.= ($valor1. ' x '. $contador. ' = '. $produto. '<br/>');
+                    }
+                }
+            }
+        }
+    }
+    
 
 ?>
 
@@ -33,15 +70,15 @@
 
             <div id="form">
                 <form name="formTabuada" method="post" action="tabuada.php">
-                    Tabuada: <input type="text" name="txtn1" value=""> <br>
-                    Contador:<input type="text" name="txtn2" value="">
+                    Tabuada: <input type="text" name="txtn1" value="<?=$valor1?>"> <br>
+                    Contador:<input type="text" name="txtn2" value="<?=$valor2?>">
 
                     <div id="container-button">
                             <input type="submit" name="buttonCalcular" value="Calcular">
                     </div>
 
                     <div id="resultado">
-                        resultado
+                        <?=$resultado?>
                     </div>
 
                 </form>
@@ -49,7 +86,6 @@
             </div>
             
         </div>
-
 
         <div id="menu-bar">
         <div id="menu" onclick="menuOnClick()">
