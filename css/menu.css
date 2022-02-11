@@ -73,11 +73,11 @@
     background-color: white;
 }
 .change #barra1 {
-    transform: translateY(4px) rotateZ(-45deg);
+    transform: translateY(5px) rotate(-135deg) ;
 
 }
 .change #barra3 {
-    transform: translateY(-4px) rotateZ(45deg);
+    transform: translateY(-5px) rotate(135deg);
 }
 .change #barra2 {
     opacity: 0;

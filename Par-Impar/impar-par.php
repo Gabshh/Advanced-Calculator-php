@@ -3,48 +3,48 @@
      * Objetivo: Identificar os números impares e pares 
      * entre os valores que o usúario escolher
      * Desenvolvedor: Gabriel Gomes
-     * Data: 10/02/2022
-     * Versão: 1.0 
+     * Data: 11/02/2022
+     * Versão: 2.0 
     *****************************************************/
+
+    require_once("../Calculadora/modulo/calculos.php");
+    require_once("../Calculadora/modulo/config.php");
 
     //Declaração de variáveis
     $valor1 = (int) 0;
     $valor2 = (int) 0;
-    $resultadoImpar = (int) null;
-    $resultadoPar = (int) null;
+    $resultadoImpar = (string) null;
+    $resultadoPar = (string) null;
+    $quantidadeImpar = (int) 0;
+    $quantidadePar = (int) 0;
+    $opcoesValor1 = (int) 0;
+    $opcoesValor2 = (int) 0;
 
     //Verificar se o botão foi clicado
     if (isset($_POST['buttonCalcular'])) {
         //Recebendo os dados do formulário
         $valor1 = $_POST['txtn1'];
         $valor2 = $_POST['txtn2'];
-        
-        for($contador = 0; $contador <= $valor2; $contador++){
-            if ($contador % 2 == 0){
-                $resultadoPar .= $contador. '<br/>';
-            }else{
-                $resultadoImpar .= $contador. '<br/>';
+
+        if ($valor1 == "" || $valor2 == ""){
+            echo(ERRO_MSG_CAIXA_VAZIA);
+        } elseif ($valor1 > $valor2){
+            echo(ERRO_NUMERO_INCALCULAVEL);
+        } elseif ($valor1 == $valor2){
+            echo(ERRO_NUMEROS_IGUAIS);
+        }else{
+            //Loop para 
+            for($contador = $valor1; $contador <= $valor2; $contador++){
+                if ($contador % 2 == 0){
+                    $resultadoPar .= $contador. '<br/>';
+                    $quantidadePar++;
+                }else{
+                    $resultadoImpar .= $contador. '<br/>';
+                    $quantidadeImpar++;
+                }
             }
-
-
-        }   
-
-
-        /*Exemplo utilizando WHILE
-            while($contador <= $valor) {
-                echo($contador. '<br>');
-                //$contador = $contador + 1 OU $contador+=1;
-                $contador++;
-        }*/
-
-        for($contador = 0; $contador <= $valor; $contador++)
-            //echo($contador. '<br>'); OU $resultado = $resultado . $contador.'br';
-            $resultado.= $contador.'<br>';
-
-
-
-
-    }
+        }
+    }   
 
 ?>
 
@@ -67,8 +67,17 @@
 
             <div id="form">
                 <form name="formRepeticao" method="post" action="impar-par.php">
-                    <span>n° inicial:</span> <input type="text" name="txtn1" value=""> <br>
-                    <span>⠀n°  final:</span> <input type="text" name="txtn2" value="">
+                    <span>n° inicial:</span> 
+                        <select name="txtn1">
+                            <option value="">Por favor selecione um número</option>
+                            <?=gerarOptions(0, 500)?>
+                        </select> <br/>
+
+                    <span>⠀n°  final:</span> 
+                    <select name="txtn2">
+                            <option value="">Por favor selecione um número</option>
+                            <?=gerarOptions(100, 1000)?>
+                        </select>
 
                     <div id="container-button">
                             <input type="submit" name="buttonCalcular" value="Calcular">
@@ -80,8 +89,13 @@
                 </div>
 
                 <div id="resultados">
-                    <div id="resultado-impar"></div>
-                    <div id="resultado-par"></div>
+                    <div id="resultado-impar"><?=$resultadoImpar?></div>
+                    <div id="resultado-par"><?=$resultadoPar?></div>
+                </div>
+
+                <div id="quantidades">
+                    <div id="quantidadeImpar">Total de impares:<br/> <?=$quantidadeImpar?></div>
+                    <div id="quantidadePar">Total de pares:<br/> <?=$quantidadePar?></div>
                 </div>
 
                 </form>
@@ -89,7 +103,6 @@
             </div>
             
         </div>
-
         
         <div id="menu-bar">
         <div id="menu" onclick="menuOnClick()">
