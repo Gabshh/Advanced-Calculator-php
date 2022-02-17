@@ -101,13 +101,14 @@ body {
 }
 
 .sun {
-  left: 32.5%;
+  left: 23%;
   width: 40vh;
   height: 40vh;
   font-size: 1rem;
   border-radius: 20vh;
   position: relative;
   overflow: hidden;
+  
   
 }
 

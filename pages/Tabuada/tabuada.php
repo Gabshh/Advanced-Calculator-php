@@ -8,9 +8,9 @@
     *****************************************************/
 
     //Import do arquivo de configurações de variáveis e constantes
-	require_once("../Calculadora/modulo/config.php");
+	require_once("../../modulo/config.php");
     //Import do arquivo de funções para calculos matemáticos
-	require_once("../Calculadora/modulo/calculos.php");
+	require_once("../../modulo/calculos.php");
 
     //Declaração de variáveis 
     $valor1 = (double) 0;
@@ -57,9 +57,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../../css/menu.css">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="../css/synthwave.css">
+        <link rel="stylesheet" href="../../css/synthwave.css">
         <title>Tabuada</title>
     </head>
     <body>
@@ -95,7 +95,7 @@
 
         </div>
         <ul class="nav" id="nav">
-            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../../Home/index.html">Home</a></li>
             <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
             <li><a href="../Média/media.php">Média</a></li>
             <li><a href="../Par-Impar/impar-par.php">Pares e Ímpares</a></li>
@@ -108,6 +108,6 @@
     <div class="overlay"></div>
     <div class="overlay glitch"></div>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
     </body>
 </html>

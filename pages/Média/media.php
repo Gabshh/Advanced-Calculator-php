@@ -1,4 +1,5 @@
 <?php
+
     //Declaração de variáveis 
     //nomeVar = (tipoDados) valorInicial
     $nota1 = (double) 0;
@@ -55,9 +56,9 @@
 <html lang="pt-BR">
     <head>
         <title>Média</title>
-       <link rel="stylesheet" href="../css/menu.css">
+       <link rel="stylesheet" href="../../css/menu.css">
        <link rel="stylesheet" href="./css/style.css">
-       <link rel="stylesheet" href="../css/synthwave.css">
+       <link rel="stylesheet" href="../../css/synthwave.css">
         <meta charset="utf-8">
     </head>
 	<body>
@@ -112,7 +113,7 @@
 
         </div>
         <ul class="nav" id="nav">
-            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../../Home/index.html">Home</a></li>
             <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
             <li><a href="#">Média</a></li>
             <li><a href="../Par-Impar/impar-par.php">Pares e Ímpares</a></li>
@@ -125,7 +126,7 @@
         <div class="overlay"></div>
         <div class="overlay glitch"></div>
 
-        <script src="../js/script.js"></script>
+        <script src="../../js/script.js"></script>
         
 		
 	</body>

@@ -1,7 +1,7 @@
 #conteudo{
     display: flex;
     width: 400px;
-    height: 402px;
+    height: 470px;
     margin-left: auto;
     margin-right: auto;
     border: solid 1px #0c000f;
@@ -26,7 +26,7 @@
 
 #form{
     width: inherit;
-    height: 440px;
+    height: 470px;
     position: absolute;
 
     padding-top: 90px;
@@ -50,7 +50,17 @@ input{
     width: 200px;
     height: 50px;
     float: left;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+#buttonReset{
+
+    width: 200px;
+    height: 50px;
+    float: right;
+    text-align: center;
 }
 
 #secao-impar{

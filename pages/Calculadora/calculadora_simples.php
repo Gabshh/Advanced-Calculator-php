@@ -10,10 +10,10 @@
 	//require_once()
 
 	//Import do arquivo de configurações de variáveis e constantes
-	require_once("./modulo/config.php");
+	require_once("../../modulo/config.php");
 
 	//Import do arquivo de funções para calculos matemáticos
-	require_once("./modulo/calculos.php");
+	require_once("../../modulo/calculos.php");
 
 	//Declaração de variáveis
 	$valor1 = (double) 0;
@@ -98,9 +98,9 @@ if(isset($_POST['btncalc'])) {
 <html>
     <head>
         <title>Calculadora - Simples</title>
-		<link rel="stylesheet" href="../css/menu.css">
+		<link rel="stylesheet" href="../../css/menu.css">
 		<link rel="stylesheet" href="./css/stylesCalculadora.css">
-		<link rel="stylesheet" href="../css/synthwave.css">
+		<link rel="stylesheet" href="../../css/synthwave.css">
     </head>
 	<body>
         
@@ -139,7 +139,7 @@ if(isset($_POST['btncalc'])) {
 
         </div>
         <ul class="nav" id="nav">
-            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../../Home/index.html">Home</a></li>
             <li><a href="#">Calculadora</a></li>
             <li><a href="../Média/media.php">Média</a></li>
             <li><a href="../Par-Impar/impar-par.php">Pares e Ímpares</a></li>
@@ -152,7 +152,7 @@ if(isset($_POST['btncalc'])) {
     <div class="overlay"></div>
     <div class="overlay glitch"></div>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 		
 	</body>
 

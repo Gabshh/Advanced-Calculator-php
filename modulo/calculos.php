@@ -43,37 +43,18 @@
         return $result;
     }
 
-    // Criando uma função para gerar as opções dentro do select inicial
-    //function gerarOptionsIniciais () {
-        //Variável local
-        //$opcao = (string) null;
-
-        //for($contador = 0; $contador <= 500; $contador++){
-           // $opcao.= "<option value='$contador'>$contador</option>";
-        //}
-        //return $opcao;
-    //}
-
     // Criando uma função para gerar as opções dentro do select final
-    function gerarOptions($inicio, $fim) {
+    function gerarOptions($inicio, $fim, $valorSelecionado) {
         //Variável local
         $opcao = (string) null;
 
         for ($contador = $inicio; $contador <= $fim; $contador++) {
-            $opcao.= "<option value='$contador'>$contador</option>";
+            $opcao.= "<option value='$contador' >$contador</option>";
+            if(isset($_POST['buttonCalcular'])){
+                $opcao = "<option value='$valorSelecionado' selected >$valorSelecionado</option>";
+            }
+            
         }
-
         return $opcao;
-
     }
-    
-    //function gerarOptionsFinais () {
-        //Variável local
-        //$opcao = (string) null;
-
-        //for($contador = 100; $contador <= 1000; $contador++){
-            //$opcao.= "<option value='$contador'>$contador</option>";
-        //}
-        //return $opcao;
-    //}
 ?>

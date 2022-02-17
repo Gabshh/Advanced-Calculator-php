@@ -7,8 +7,8 @@
      * Versão: 2.0 
     *****************************************************/
 
-    require_once("../Calculadora/modulo/calculos.php");
-    require_once("../Calculadora/modulo/config.php");
+    require_once("../../modulo/calculos.php");
+    require_once("../../modulo/config.php");
 
     //Declaração de variáveis
     $valor1 = (int) 0;
@@ -44,7 +44,8 @@
                 }
             }
         }
-    }   
+
+    }
 
 ?>
 
@@ -54,9 +55,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../../css/menu.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="../css/synthwave.css">
+    <link rel="stylesheet" href="../../css/synthwave.css">
     <title>Pares e Impares</title>
 </head>
 <body>
@@ -70,17 +71,22 @@
                     <span>n° inicial:</span> 
                         <select name="txtn1">
                             <option value="">Por favor selecione um número</option>
-                            <?=gerarOptions(0, 500)?>
+                            <?=gerarOptions(0, 500, $valor1)?>
                         </select> <br/>
 
                     <span>⠀n°  final:</span> 
                     <select name="txtn2">
                             <option value="">Por favor selecione um número</option>
-                            <?=gerarOptions(100, 1000)?>
+                            <?=gerarOptions(100, 1000, $valor2)?>
                         </select>
 
                     <div id="container-button">
-                            <input type="submit" name="buttonCalcular" value="Calcular">
+                        <input type="submit" name="buttonCalcular" value="Calcular">
+                        <div id="buttonReset">
+                            <a href="impar-par.php">
+                                <button>Limpar</button>
+                            </a>    
+                        </div>
                     </div>
 
                 <div id="divisao-resultados">
@@ -112,7 +118,7 @@
 
         </div>
         <ul class="nav" id="nav">
-            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../../Home/index.html">Home</a></li>
             <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
             <li><a href="../Média/media.php">Média</a></li>
             <li><a href="#">Pares e Ímpares</a></li>
@@ -125,7 +131,7 @@
     <div class="overlay"></div>
     <div class="overlay glitch"></div>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
     
 </body>
 </html>
